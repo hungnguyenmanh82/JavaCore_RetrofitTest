@@ -165,8 +165,8 @@ public class UserServiceTest {
             System.out.println(user);
 
             //========================= Request ================
-            //hàm này chỉ lấy đc khi đã có request hoàn thành (bước synchronous ở trên)
-            //Lưu ý nó sẽ lấy Request gần nhất tới Server.
+            //Tại đây tất cả các requests trên đã đc thực hiện rồi
+            //Server lưu lại request để cho phép test, Khi lấy ra khỏi queue thì sẽ bị xóa
             RecordedRequest recordedRequest = server.takeRequest();
 
             List<String> headers = recordedRequest.getHeaders();
@@ -263,8 +263,8 @@ public class UserServiceTest {
             System.out.println(userResponse);
 
             //========================= Request ============================
-            //hàm này chỉ lấy đc khi đã có request hoàn thành (bước synchronous ở trên)
-            //Lưu ý nó sẽ lấy Request gần nhất tới Server.
+            //Tại đây tất cả các requests trên đã đc thực hiện rồi
+            //Server lưu lại request để cho phép test, Khi lấy ra khỏi queue thì sẽ bị xóa
             RecordedRequest recordedRequest = server.takeRequest();
 
             List<String> headers = recordedRequest.getHeaders();
