@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import okhttp3.Interceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -206,7 +207,6 @@ public class UserServiceTest {
                 .addHeader("Set-Cookie: c=third; Domain=.t-mobile.com")
                 .addHeader("Content-Type: application/json; charset=utf-8")
                 .setBody(bodyResponse));
-
 
 
         //start server here (tuần tự trả về cho request) => bắt buộc
